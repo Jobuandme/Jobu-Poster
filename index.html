@@ -10,7 +10,7 @@
     <style>
       html {
         margin: 0;
-        padding: 0; 
+        padding: 0;
       }
 
       body {
@@ -124,14 +124,14 @@
         width: 100%;
       }
 
-      
+
       .name-Main {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 900;
         font-style: normal;
         font-size: 3em;
       }
-      
+
       .name-Sub {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 400;
@@ -140,23 +140,23 @@
         transform: translate(0%, -125%);
         font-size: 1.55em;
       }
-      
+
       .footer {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 700;
         font-style: normal;
         color: #516543;
         font-size: 2em;
-        margin-top: 500px;
+        margin-top: 200px;
       }
-      
+
       .contactsFooter {
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
         gap: 20px;
       }
-      
+
       .paraElement {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 400;
@@ -171,7 +171,7 @@
         margin-top: 100px;
         line-height: 30px;
       }
-      
+
       .titleElement {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 700;
@@ -184,15 +184,15 @@
         margin-top: 200px;
         line-height: 30px;
       }
-      
+
       b {
         color: #516543;
       }
-      
+
       .nav-link {
         color: #a9a9a9;
         text-decoration: none;
-        font-size: 18px; 
+        font-size: 18px;
         cursor: pointer;
         font-family: "azo-sans-web", sans-serif;
         font-weight: 400;
@@ -204,73 +204,115 @@
         font-family: "azo-sans-web", sans-serif;
         font-weight: 500;
         font-style: normal;
-        }
-      
-        .backButton {
-          position: absolute;
-          top: 30px;
-          left: 25%;
-          font-size: 1.2em;
-        }
-      
-        td {
-            text-align: center;
-            vertical-align: middle;
-        }
-        .table-1x5 {
-            margin-top: 50px;
-            width: 80%;
-        }
-      
-        .table-1x5 img {
-            width: auto;
-            height: 330px; 
-            object-fit: cover;
-        }
-      
+      }
+
+      .backButton {
+        position: absolute;
+        top: 30px;
+        left: 25%;
+        font-size: 1.2em;
+      }
+
+      .table-1x5 {
+        margin-top: 50px;
+        width: 60%;
+        max-width: 60vw;
+        /* Ensures it doesn’t exceed 60% of the screen width */
+        display: flex;
+        justify-content: center;
+      }
+
+      .table-1x5 td {
+        width: 20%;
+        /* Even distribution for 5 images */
+      }
+
+      .table-1x5 img {
+        width: 100%;
+        /* Make images fill the table cell */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-height: 200px;
+        /* Adjust to a reasonable max height */
+        object-fit: contain;
+        /* Ensures images don’t get cropped */
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
     </style>
   </head>
 
   <body class="back">
-    
+
 
     <div class="content">
-        <div class="backButton">
+      <div class="backButton">
         <a href="https://jobuandme.github.io/new-portfolio-save/" class="nav-link"><- Back</a>
       </div>
-      <div class="titleElement">  
-      Jobu Poster
+      <div class="titleElement">
+        Jobu Poster
       </div>
-      
+
       <div class="paraElement">
         <p>Over my winter term reading week, I spent several days creating this poster to strengthen my illustration skills. I began with a rough idea and sketch; it took several attempts to get something I was happy with. In the early stages of creation, I was struggling to get the letters to look how I wanted, but I continued on. Ignoring my thoughts in the early stages of creation allowed me to push on and have an excellent final product come together. Having lost a full day of progress from a Photoshop crash, making this poster really taught me to trust the process as well as that sticking to your vision/plan is critical.<br><br>
-        Made in Photoshop.</p>
+          Made in <b>Photoshop</b>.</p>
       </div>
-      
+
       <div class="displayedWork">
         <img src="Jobu Poster New - Low Res.jpg" alt="magazine cover" style="width: 50%">
       </div>
-          
+
+      <div class="paraElement">
+        <p>Progress Images:</p>
+      </div>
+
       <table class="table-1x5">
         <tr>
-            <td><img src="Progress 1.png" alt="Image 1"></td>
-            <td><img src="progress 2.png" alt="Image 2"></td>
-            <td><img src="progress 4.png" alt="Image 3"></td>
-            <td><img src="progress 5.png" alt="Image 4"></td>
-            <td><img src="progress 8.png" alt="Image 5"></td>
+          <td><img src="Progress 1.png" class="progress-img" alt="Image 1"></td>
+          <td><img src="progress 2.png" class="progress-img" alt="Image 2"></td>
+          <td><img src="progress 4.png" class="progress-img" alt="Image 3"></td>
+          <td><img src="progress 5.png" class="progress-img" alt="Image 4"></td>
+          <td><img src="progress 8.png" class="progress-img" alt="Image 5"></td>
         </tr>
-    </table>
-      
-      
-       <div class="textBox">
+      </table>
+      <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg">
+      </div>
+      <div class="textBox">
         <h1 class="footer"> Michael Gvozdek 2025</h1>
         <div class="contactsFooter">
           <a href="http://www.youtube.com/@jobuandme">
             <img src="Youtube.png" alt="Youtube" style="width: 40px; height: 40px;">
           </a>
 
-          <img src="Linkedin.png" alt="description of image" style="width: 40px; height: 40px; transform: translateY(-8px);" >
-          
+          <img src="Linkedin.png" alt="description of image" style="width: 40px; height: 40px; transform: translateY(-8px);">
+
           <a href="mailto:michaelgvozdek@icloud.com">
             <img src="mail.png" alt="description of image" style="width: 40px; height: 40px;">
           </a>
@@ -278,5 +320,18 @@
       </div>
     </div>
   </body>
+  <script>
+    const images = document.querySelectorAll('.table-1x5 img');
 
+    images.forEach((image) => {
+      image.onclick = function() {
+        document.getElementById("modalImg").src = this.src;
+        document.getElementById("myModal").style.display = "flex";
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
 </html>
